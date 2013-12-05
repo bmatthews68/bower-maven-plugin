@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.btmatthews.maven.plugins.bower</groupId>
+    <artifactId>get-jquery</artifactId>
+    <version>1.0.0</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.btmatthews.maven.plugins</groupId>
+                <artifactId>bower-maven-plugin</artifactId>
+                <version>@project.version@</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>download</goal>
+                        </goals>
+                        <configuration>
+                            <packages>
+                                <package>
+                                    <name>jquery</name>
+                                    <version>2.0.3</version>
+                                </package>
+                            </packages>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
